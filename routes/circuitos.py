@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from config.db import conn
-from models.tables import circuits
+from models.circuit import circuits
 
 circuit = APIRouter()
 
