@@ -4,7 +4,7 @@ from config.db import meta, engine
 
 drivers = Table('driver', meta, Column('driverId', Integer, primary_key=True), 
                                 Column('driverRef', String(255)),
-                                Column('number', String(255)),
+                                Column('num', String(255)),
                                 Column('code', String(255)),
                                 Column('name', String(255)),
                                 Column('dob', String(255)),

@@ -121,7 +121,7 @@ SELECT * FROM result; -- Devuelve 24960 registros
 
 SELECT DISTINCT * FROM result; -- Devuelve 24960 registros, no hay registros duplicados
 
-SELECT DISTINCT resultId FROM result; -- Devuelve 24960 registros, no hay Id duplicados
+SELECT DISTINCT resultId FROM result; -- Devuelve 24960 registros, no hay Id duplicados 
 
 ALTER TABLE `result` CHANGE `resultId` `resultId` INT NOT NULL;
 ALTER TABLE `result` CHANGE `raceId` `raceId` INT NOT NULL;
