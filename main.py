@@ -1,4 +1,3 @@
-from copyreg import constructor
 from fastapi import FastAPI
 from routes.circuitos import circuit
 from routes.constructor import cons
