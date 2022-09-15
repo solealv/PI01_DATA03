@@ -18,8 +18,12 @@ result = get_datos('result')
 
 # Año con más carreras
 def anioMasCarreras():
+    # De la tabla race puedo obtener este dato agrupando por año y contando las carreras
     agrupados = race.groupby(['year']).count()
+    # Con max() obtengo el numero maximo de carreras corridas durante un año
     max = agrupados.raceId.max()
+    # Con idxmax() obtengo el año durante el cual se corrieron mas carreras.
+    # ya que al agrupar el indice pasa a ser el año.
     anio_max = agrupados.raceId.idxmax()
 
     return print(f'Consulta 1: \nEl año con más carreras fue {anio_max} con {max} carreras en total\n')

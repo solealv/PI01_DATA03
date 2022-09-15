@@ -1,13 +1,13 @@
 from sqlalchemy import Table, Column
-from sqlalchemy.sql.sqltypes import Integer, String
+from sqlalchemy.sql.sqltypes import Integer, String, Time, Numeric
 from config.db import meta, engine
 
 pit_stops = Table('pit_stop', meta, Column('raceId', Integer, primary_key=True), 
-                                Column('driverId', String(255)),
-                                Column('stop', String(255)),
-                                Column('lap', String(255)),
-                                Column('time', String(255)),
-                                Column('duration', String(255)),
-                                Column('milliseconds', String(255)))
+                                Column('driverId', Integer),
+                                Column('stop', Integer),
+                                Column('lap', Integer),
+                                Column('time', Time),
+                                Column('duration', Numeric(5,3)),
+                                Column('milliseconds', Integer))
 
 meta.create_all(engine)

@@ -1,14 +1,14 @@
 from sqlalchemy import Table, Column
-from sqlalchemy.sql.sqltypes import Integer, String
+from sqlalchemy.sql.sqltypes import Integer, String, Date, Text
 from config.db import meta, engine
 
 drivers = Table('driver', meta, Column('driverId', Integer, primary_key=True), 
-                                Column('driverRef', String(255)),
-                                Column('num', String(255)),
-                                Column('code', String(255)),
-                                Column('name', String(255)),
-                                Column('dob', String(255)),
-                                Column('nationality', String(255)),
-                                Column('url', String(255)))
+                                Column('driverRef', String(100)),
+                                Column('num', Integer),
+                                Column('code', String(10)),
+                                Column('name', String(100)),
+                                Column('dob', Date),
+                                Column('nationality', String(100)),
+                                Column('url', Text))
 
 meta.create_all(engine)

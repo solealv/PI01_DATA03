@@ -8,7 +8,8 @@ from routes.race import race
 from routes.result import result
 
 
-app = FastAPI()
+app = FastAPI(title='Datasets Formula 1',
+              description='Esta API contiene datos sobre la Formula 1')
 
 app.include_router(circuit)
 app.include_router(cons)
