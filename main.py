@@ -19,5 +19,5 @@ app.include_router(race)
 app.include_router(result)
 
 @app.get('/')
-def helloworld():
-    return 'Hello world'
+def inicio():
+    return 'Ingrese a localhost:8000/docs para mas informacion sobre el contenido de esta API'
