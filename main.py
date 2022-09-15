@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routes.circuitos import circuit
+from routes.circuit import circuit
 from routes.constructor import cons
 from routes.driver import driver
 from routes.pit_stop import pit_stop

@@ -7,4 +7,4 @@ circuit = APIRouter()
 
 @circuit.get('/circuit', response_model=list[Circuit])
 def get_circuit():
-    return conn.execute(circuits.select()).fetchall()
+    return conn.execute(circuits.select()).fetchall() 
