@@ -9,5 +9,5 @@ class Circuit(BaseModel):
     country: str
     lat: float
     lng: float
-    alt: float
+    alt: float 
     url: str

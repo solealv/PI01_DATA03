@@ -7,8 +7,8 @@ races = Table('race', meta, Column('raceId', Integer, primary_key=True),
                                 Column('round', Integer),
                                 Column('circuitId', Integer),
                                 Column('name', String(100)),
-                                Column('date', Date),
-                                Column('time', Time),
+                                Column('date', String(15)),
+                                Column('time', String(15)),
                                 Column('url', Text))
 
 meta.create_all(engine)

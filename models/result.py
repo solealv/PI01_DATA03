@@ -19,6 +19,6 @@ results = Table('result', meta, Column('resultId', Integer, primary_key=True),
                                 Column('rank', Text),
                                 Column('fastestLapTime', Text),
                                 Column('fastestLapSpeed', Text),
-                                Column('StatusId', Integer))
+                                Column('statusId', Integer))
 
 meta.create_all(engine)
